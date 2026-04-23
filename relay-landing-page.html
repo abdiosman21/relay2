@@ -1,0 +1,1250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Relay. Let the CRM work for you. You focus on selling and keeping clients.</title>
+<meta name="description" content="Relay is the agentic CRM for B2B revenue teams. Twelve first-party agents capture leads, run campaigns and webinars, send contracts, forecast the quarter, and keep your customers, so you can spend your day selling. Half the TCO of HubSpot." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Archivo+Black&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#FFFFFF; --ink-2:#F7F9FC; --panel:#FFFFFF;
+    --line:#E7EAF0; --line-2:#D1D6E0;
+    --text:#0B0B10; --muted:#7A8593; --sub:#4F5867;
+    --accent:#1E5BFF; --accent-2:#4B7AFF; --accent-deep:#0F3AB5;
+    --danger:#C13A2A; --good:#166534;
+    --glass: rgba(10,15,35,.03); --glass-2: rgba(10,15,35,.05);
+    --radius:14px; --radius-lg:20px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--ink);color:var(--text);font-family:'Inter',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  body{background:radial-gradient(1200px 600px at 80% -10%, rgba(108,140,255,.14), transparent 60%),radial-gradient(900px 500px at -10% 10%, rgba(59,95,224,.10), transparent 60%),var(--ink);overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--accent);color:#FFFFFF}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+  /* Nav */
+  nav.top{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:rgba(255,255,255,.85);border-bottom:1px solid var(--line)}
+  nav .row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.035em;font-size:22px;font-family:'Archivo',system-ui,sans-serif;text-transform:uppercase}
+  .logo svg{width:22px;height:22px}
+  .nav-links{display:flex;gap:28px;font-size:14px;color:var(--sub);align-items:center}
+  .nav-links a:hover{color:var(--text)}
+  .nav-links .has-menu{display:flex;align-items:center;gap:4px;cursor:pointer;position:relative;padding:8px 0}
+  .nav-links .has-menu::after{content:'';width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-2px,-2px);transition:transform .2s}
+  .nav-links .has-menu.open::after{transform:rotate(-135deg) translate(-2px,-2px)}
+  .mega{position:absolute;left:0;right:0;top:100%;background:#FFFFFF;border-bottom:1px solid var(--line);box-shadow:0 30px 60px -20px rgba(10,15,35,.12);opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .18s ease, transform .18s ease;z-index:30}
+  .mega.open{opacity:1;pointer-events:auto;transform:translateY(0)}
+  .mega-inner{max-width:1180px;margin:0 auto;padding:36px 28px 40px;display:grid;grid-template-columns:1.1fr 3fr;gap:48px}
+  .mega-intro h4{font-family:'Archivo',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.025em;margin:0 0 8px}
+  .mega-intro p{font-size:13px;color:var(--sub);margin:0 0 18px;line-height:1.55}
+  .mega-intro .pill-links{display:flex;flex-direction:column;gap:10px}
+  .mega-intro .pill-links a{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:13px;font-weight:500;color:var(--text);transition:border-color .15s, background .15s}
+  .mega-intro .pill-links a:hover{border-color:var(--accent);background:rgba(30,91,255,.04)}
+  .mega-intro .pill-links a .ico{width:22px;height:22px;border-radius:6px;background:var(--accent);color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;font-family:'JetBrains Mono',monospace}
+  .hubs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 36px}
+  .hub-item{display:block;padding:0}
+  .hub-item .hub-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+  .hub-item .hub-ico{width:24px;height:24px;border-radius:6px;background:rgba(30,91,255,.1);color:var(--accent-deep);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;border:1px solid rgba(30,91,255,.25)}
+  .hub-item h5{margin:0;font-family:'Archivo',sans-serif;font-weight:700;font-size:15px;letter-spacing:-.015em;color:var(--text)}
+  .hub-item .hub-sub{font-size:12.5px;color:var(--sub);line-height:1.5;margin:0 0 8px}
+  .hub-item .hub-link{font-size:12px;color:var(--accent);font-weight:500;border-bottom:1px solid rgba(30,91,255,.3);transition:border-color .15s}
+  .hub-item:hover .hub-link{border-color:var(--accent)}
+  .hub-item .hub-badge{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);background:rgba(30,91,255,.08);border:1px solid rgba(30,91,255,.2);padding:2px 6px;border-radius:4px;margin-left:6px;vertical-align:1px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;font-weight:500;font-size:14px;transition:transform .15s ease, background .15s ease, border-color .15s ease;border:1px solid transparent;cursor:pointer}
+  .btn-primary{background:var(--accent);color:#FFFFFF;border-color:var(--accent)}
+  .btn-primary:hover{background:var(--accent-deep);transform:translateY(-1px)}
+  .btn-ghost{border-color:var(--line-2);color:var(--text)}
+  .btn-ghost:hover{border-color:var(--sub)}
+  .btn-lg{padding:14px 24px;font-size:15px}
+
+  /* Hero */
+  .hero{padding:120px 0 60px;position:relative}
+  .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:var(--glass);border:1px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--sub);letter-spacing:.02em}
+  .badge .dot{width:6px;height:6px;border-radius:50%;background:var(--good);box-shadow:0 0 10px var(--good)}
+  h1.hero-title{font-family:'Archivo',system-ui,-apple-system,sans-serif;font-size:clamp(44px,7vw,82px);line-height:1.02;letter-spacing:-.032em;margin:22px 0 20px;font-weight:800;max-width:18ch}
+  h1 .italic{font-family:'Archivo',system-ui,-apple-system,sans-serif;font-weight:800;font-style:italic;color:var(--accent-2);letter-spacing:-.032em}
+  .hero-sub{color:var(--sub);font-size:clamp(17px,1.6vw,20px);max-width:64ch;margin:0 0 36px}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .hero-meta{margin-top:24px;color:var(--muted);font-size:13px;font-family:'JetBrains Mono',monospace}
+  .hero-stats{display:flex;gap:40px;flex-wrap:wrap;margin-top:36px;padding-top:32px;border-top:1px solid var(--line)}
+  .hero-stats .stat{max-width:22ch}
+  .hero-stats .big{font-family:'Archivo',system-ui,-apple-system,sans-serif;font-size:40px;letter-spacing:-.035em;line-height:1;color:var(--text);font-weight:800}
+  .hero-stats .lbl{font-size:13px;color:var(--sub);margin-top:8px}
+
+  /* Companies strip */
+  .logos-strip{padding:42px 0 30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:80px;background:#FFFFFF}
+  .logos-kicker{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);text-align:center;margin:0 0 22px}
+  .logos{display:flex;gap:56px;justify-content:center;align-items:center;flex-wrap:wrap}
+  .logos .wm{font-weight:700;font-size:22px;letter-spacing:-.01em;color:#000000;font-family:'Inter',system-ui,sans-serif;opacity:.88}
+  .logos .wm.serif{font-family:'Archivo',system-ui,-apple-system,sans-serif;font-weight:400;font-style:italic}
+  .logos .wm.mono{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:20px;letter-spacing:.02em}
+
+  /* Manifesto */
+  .manifesto-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:stretch}
+  .kpi-flip{border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:#FFFFFF}
+  .kpi-flip .k-old{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:12px}
+  .kpi-flip.good-card{background:linear-gradient(180deg,rgba(30,91,255,.05),rgba(30,91,255,.02));border-color:rgba(30,91,255,.25)}
+  .k-list{list-style:none;padding:0;margin:0;font-size:14px}
+  .k-list li{padding:7px 0;border-bottom:1px dashed var(--line);color:var(--sub);display:flex;gap:8px;align-items:flex-start}
+  .k-list li:last-child{border-bottom:none}
+  .k-list.bad li::before{content:'✕';color:var(--danger);flex-shrink:0}
+  .k-list.good li{color:var(--text);font-weight:500}
+  .k-list.good li::before{content:'→';color:var(--accent);flex-shrink:0}
+
+  /* Hero mock */
+  .hero-mock{margin-top:56px;border:1px solid var(--line);border-radius:var(--radius-lg);background:linear-gradient(180deg,var(--panel),var(--ink-2));overflow:hidden;box-shadow:0 30px 80px -20px rgba(30,91,255,.18)}
+  .mock-head{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--line);background:rgba(10,15,35,.02)}
+  .mock-dots{display:flex;gap:6px}
+  .mock-dots span{width:10px;height:10px;border-radius:50%;background:var(--line-2)}
+  .mock-dots span:first-child{background:#FF6259}
+  .mock-dots span:nth-child(2){background:#FFBD2E}
+  .mock-dots span:last-child{background:#27C93F}
+  .mock-tabs{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);display:flex;gap:18px}
+  .mock-tabs span{cursor:pointer;padding:4px 2px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+  .mock-tabs span:hover{color:var(--sub)}
+  .mock-tabs span.active{border-color:var(--accent);color:var(--text)}
+  .mock-body{display:grid;grid-template-columns:220px 1fr 280px;min-height:520px}
+  .mock-nav{border-right:1px solid var(--line);padding:20px 14px;font-size:13px;color:var(--sub)}
+  .mock-nav .section{color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;margin:18px 0 8px}
+  .mock-nav .item{padding:7px 10px;border-radius:8px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:background .12s,color .12s}
+  .mock-nav .item:hover{background:var(--glass)}
+  .mock-nav .item.active{background:rgba(30,91,255,.10);color:var(--text)}
+  .mock-nav .item .kbd{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)}
+  .mock-nav .dot-s{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .mock-main{padding:24px 26px;border-right:1px solid var(--line)}
+  .view-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+  .chip-filter{display:inline-flex;align-items:center;padding:5px 11px;border-radius:999px;border:1px solid var(--line-2);font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--sub);background:#FFFFFF;cursor:pointer;transition:all .15s}
+  .chip-filter:hover{border-color:var(--accent);color:var(--accent-deep)}
+  .chip-filter.active{background:var(--accent);color:#FFFFFF;border-color:var(--accent)}
+  .mock-row{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);font-size:13px;align-items:center;cursor:pointer;transition:background .12s}
+  .mock-row.header{color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;cursor:default}
+  .mock-row:hover:not(.header){background:rgba(30,91,255,.04)}
+  .mock-row.selected{background:rgba(30,91,255,.08)}
+  .mock-row.hidden{display:none}
+  .mock-row .avatar{display:inline-flex;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#1E5BFF,#4B7AFF);color:#FFFFFF;font-size:11px;font-weight:600;align-items:center;justify-content:center;margin-right:10px}
+  .pill{display:inline-flex;align-items:center;gap:6px;padding:3px 9px;border-radius:999px;font-size:11px;font-family:'JetBrains Mono',monospace;border:1px solid var(--line-2);color:var(--sub)}
+  .pill.agent{background:rgba(30,91,255,.08);border-color:rgba(30,91,255,.28);color:var(--accent-deep)}
+  .pill.human{background:rgba(22,101,52,.08);border-color:rgba(22,101,52,.22);color:var(--good)}
+  .row-detail{margin-top:14px;padding:14px 16px;border-radius:10px;background:var(--ink-2);border:1px solid var(--line);font-size:13px;color:var(--sub);font-family:'JetBrains Mono',monospace;min-height:44px;display:flex;align-items:center}
+  .mock-aside{padding:24px 22px}
+  .mock-aside h4{font-size:13px;color:var(--muted);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;margin:0 0 14px;font-weight:500}
+  .agent-card{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--glass);margin-bottom:10px}
+  .agent-card .name{font-weight:500;font-size:13px;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+  .agent-card .line{font-size:12px;color:var(--sub);line-height:1.45}
+  .agent-card .blip{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)}
+  .inbox-item{display:grid;grid-template-columns:32px 1fr auto;gap:14px;align-items:flex-start;padding:14px 4px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .12s}
+  .inbox-item:hover{background:rgba(30,91,255,.04)}
+  .inbox-item .avatar{width:32px;height:32px;font-size:12px}
+  .ib-from{font-weight:500;font-size:13px}
+  .ib-sub{font-size:13px;color:var(--text);margin-top:2px}
+  .ib-prev{font-size:12.5px;color:var(--sub);margin-top:3px;line-height:1.5}
+  .ib-time{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)}
+  .camp-item{display:grid;grid-template-columns:1fr auto auto;gap:24px;align-items:center;padding:16px 4px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .12s}
+  .camp-item:hover{background:rgba(30,91,255,.04)}
+  .camp-name{font-size:14px;font-weight:500}
+  .camp-sub{font-size:12px;color:var(--sub);margin-top:2px}
+  .camp-stat{text-align:center;min-width:54px}
+  .cs-v{font-family:'Archivo',system-ui,-apple-system,sans-serif;font-size:20px;letter-spacing:-.025em;font-weight:800}
+  .cs-k{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+  .agents-list{display:grid;gap:8px}
+  .al-item{display:grid;grid-template-columns:auto auto 1fr auto;gap:14px;align-items:center;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#FFFFFF;cursor:pointer;transition:border-color .12s}
+  .al-item:hover{border-color:var(--accent)}
+  .al-item .blip{width:7px;height:7px;border-radius:50%;background:var(--good);box-shadow:0 0 8px var(--good)}
+  .al-name{font-weight:500;font-size:13px}
+  .al-sub{font-size:12px;color:var(--sub)}
+  .al-stat{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--good);text-transform:uppercase;letter-spacing:.08em}
+  .tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 7px;border-radius:999px;color:var(--accent-deep);background:rgba(30,91,255,.08);border:1px solid rgba(30,91,255,.2)}
+
+  /* Section scaffolding */
+  section.s{padding:100px 0;position:relative}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
+  .eyebrow::before{content:'';width:24px;height:1px;background:var(--accent)}
+  h2{font-family:'Archivo',system-ui,-apple-system,sans-serif;font-size:clamp(32px,4.4vw,52px);letter-spacing:-.028em;line-height:1.08;font-weight:800;margin:0 0 18px;max-width:22ch}
+  h2 .italic{font-family:'Archivo',system-ui,-apple-system,sans-serif;font-weight:800;font-style:italic;color:var(--accent-2);letter-spacing:-.028em}
+  .lede{font-size:18px;color:var(--sub);max-width:62ch;margin:0 0 40px}
+
+  /* HubSpot tax */
+  .tax-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}
+  .tax-card{border:1px solid var(--line);border-radius:var(--radius);padding:22px;background:var(--glass)}
+  .tax-card .num{font-family:'Archivo',system-ui,-apple-system,sans-serif;font-size:48px;line-height:1;color:var(--danger);letter-spacing:-.035em;margin-bottom:8px;font-weight:800}
+  .tax-card h3{font-size:16px;margin:0 0 6px;font-weight:500}
+  .tax-card p{font-size:13px;color:var(--sub);margin:0;line-height:1.55}
+  .tax-total{margin-top:28px;display:flex;justify-content:space-between;align-items:center;padding:22px 26px;border-radius:var(--radius);background:linear-gradient(90deg,rgba(193,58,42,.06),rgba(30,91,255,.06));border:1px solid var(--line)}
+  .tax-total .k{color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+  .tax-total .v{font-size:28px;letter-spacing:-.02em}
+  .tax-total .v.bad{color:var(--danger)}
+  .tax-total .v.good{color:var(--good)}
+
+  /* Outcomes overview */
+  .outcomes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+  .outcome-card{border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px 24px;background:linear-gradient(180deg,var(--panel),var(--ink-2));position:relative}
+  .outcome-card .num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:.12em;text-transform:uppercase}
+  .outcome-card h3{font-size:22px;margin:14px 0 10px;letter-spacing:-.01em}
+  .outcome-card p{font-size:14px;color:var(--sub);margin:0 0 18px}
+  .outcome-card .agents{display:flex;flex-wrap:wrap;gap:6px}
+  .outcome-card .chip{font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px 9px;border-radius:999px;border:1px solid var(--line-2);color:var(--sub);background:#FFFFFF}
+
+  /* Outcome blocks */
+  .outcome-block{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center;padding:80px 0;border-top:1px solid var(--line)}
+  .outcome-block.flip{grid-template-columns:1.1fr 1fr}
+  .outcome-block.flip .ob-copy{order:2}
+  .outcome-block.flip .ob-visual{order:1}
+  .ob-kicker{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+  .ob-title{font-family:'Archivo',system-ui,-apple-system,sans-serif;font-size:clamp(28px,3.4vw,42px);line-height:1.08;letter-spacing:-.028em;margin:14px 0 14px;font-weight:800}
+  .ob-title .italic{font-style:italic;font-weight:800;color:var(--accent-2)}
+  .ob-copy p.lede{margin:0 0 22px;font-size:17px}
+  .ob-list{list-style:none;padding:0;margin:0 0 24px}
+  .ob-list li{display:flex;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line);font-size:14.5px;color:var(--sub)}
+  .ob-list li:last-child{border-bottom:none}
+  .ob-list .ag{flex:0 0 auto;font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);background:rgba(30,91,255,.08);border:1px solid rgba(30,91,255,.2);padding:4px 9px;border-radius:999px;height:fit-content}
+  .ob-list .t{color:var(--text);font-weight:500;margin-right:6px}
+  .ob-visual{border:1px solid var(--line);border-radius:var(--radius-lg);background:linear-gradient(180deg,var(--panel),var(--ink-2));box-shadow:0 20px 60px -20px rgba(30,91,255,.15);overflow:hidden}
+
+  /* Visitor feed */
+  .visitor-feed{padding:0}
+  .vf-head{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:rgba(10,15,35,.02);font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)}
+  .vf-head .live{color:var(--good);display:flex;align-items:center;gap:8px}
+  .vf-head .live::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--good);box-shadow:0 0 8px var(--good)}
+  .vf-row{display:grid;grid-template-columns:34px 1fr auto;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);align-items:center;font-size:13px;cursor:pointer}
+  .vf-row:last-child{border-bottom:none}
+  .vf-row .logo-sq{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#1E5BFF,#4B7AFF);display:flex;align-items:center;justify-content:center;color:#FFFFFF;font-weight:700;font-size:13px}
+  .vf-row .meta{color:var(--muted);font-size:11px;font-family:'JetBrains Mono',monospace;margin-top:2px}
+  .vf-row .score{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--good);text-align:right}
+  .vf-row .score.low{color:var(--muted)}
+  .vf-foot{padding:14px 18px;background:rgba(30,91,255,.05);font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent-deep);border-top:1px solid var(--line)}
+
+  /* Mini cards */
+  .split-mock{padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .mini-card{border:1px solid var(--line);border-radius:12px;padding:16px;background:#FFFFFF}
+  .mini-card .k{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+  .mini-card .t{font-size:14px;font-weight:500;margin:8px 0 6px;line-height:1.3}
+  .mini-card .line{font-size:12px;color:var(--sub)}
+  .mini-card .thumb{height:80px;border-radius:8px;margin:10px 0 0;background:linear-gradient(135deg,#E7EEFF,#F7F9FC);border:1px solid var(--line);position:relative;overflow:hidden}
+  .mini-card .thumb::after{content:'';position:absolute;inset:auto 0 0 0;height:14px;background:linear-gradient(90deg,#1E5BFF,#4B7AFF);opacity:.9}
+  .mini-card .thumb .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#1E5BFF;font-size:22px}
+
+  /* Workflow mock */
+  .workflow{padding:18px}
+  .wf-head{display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:16px}
+  .wf-chain{display:grid;grid-template-columns:1fr;gap:10px}
+  .wf-node{border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;grid-template-columns:36px 1fr auto;gap:12px;align-items:center;background:#FFFFFF;cursor:pointer;transition:border-color .12s}
+  .wf-node:hover{border-color:var(--accent)}
+  .wf-node .ico{width:36px;height:36px;border-radius:8px;background:rgba(30,91,255,.08);color:var(--accent-deep);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;border:1px solid rgba(30,91,255,.2)}
+  .wf-node .title{font-size:13px;font-weight:500}
+  .wf-node .sub{font-size:11.5px;color:var(--muted)}
+  .wf-node .stat{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--sub)}
+  .wf-edge{height:14px;width:1px;background:var(--line-2);margin-left:18px}
+  .wf-branch{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-left:48px;position:relative}
+  .wf-branch::before{content:'';position:absolute;left:18px;top:-14px;bottom:50%;width:1px;background:var(--line-2)}
+  .wf-branch::after{content:'';position:absolute;left:18px;top:0;width:30px;height:1px;background:var(--line-2)}
+
+  /* Forecast mock */
+  .forecast-mock{padding:22px}
+  .fc-head{display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:20px}
+  .fc-row{display:grid;grid-template-columns:130px 1fr 80px;gap:14px;align-items:center;margin-top:8px}
+  .fc-lbl{font-size:13px;color:var(--text);font-weight:500}
+  .fc-bar{height:14px;background:#F2F4F9;border-radius:4px;overflow:hidden;position:relative}
+  .fc-fill{height:100%;border-radius:4px;transition:width .6s ease}
+  .fc-fill.td{background:#0B0B10}
+  .fc-fill.bu{background:var(--accent)}
+  .fc-fill.bc{background:var(--accent-2);opacity:.75}
+  .fc-val{font-family:'Archivo',system-ui,-apple-system,sans-serif;font-size:18px;text-align:right;letter-spacing:-.025em;font-weight:700}
+  .fc-sub{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin:4px 0 14px;padding-left:144px}
+  .fc-gap{margin-top:22px;padding:16px 18px;border-radius:12px;background:rgba(193,58,42,.05);border:1px solid rgba(193,58,42,.18);display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+  .fc-gap .k{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+  .fc-gap .v{font-family:'Archivo',system-ui,-apple-system,sans-serif;font-size:22px;color:var(--danger);letter-spacing:-.035em;font-weight:800}
+  .fc-gap .actions{display:grid;gap:6px;font-size:12.5px;color:var(--text)}
+  .fc-gap .act{padding:4px 0}
+
+  /* Proposal mock */
+  .proposal-mock{padding:22px}
+  .pm-head{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:18px}
+  .pm-k{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+  .pm-t{font-size:16px;font-weight:500;margin-top:4px}
+  .pm-status{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent-deep);background:rgba(30,91,255,.08);border:1px solid rgba(30,91,255,.2);padding:5px 10px;border-radius:999px}
+  .pm-timeline{display:flex;flex-direction:column;gap:2px}
+  .tl-item{display:grid;grid-template-columns:24px 1fr;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line);align-items:flex-start}
+  .tl-item:last-child{border-bottom:none}
+  .tl-dot{width:10px;height:10px;border-radius:50%;background:var(--line-2);margin-top:5px;justify-self:center}
+  .tl-dot.ok{background:var(--accent);box-shadow:0 0 8px rgba(30,91,255,.4)}
+  .tl-dot.signed{background:var(--good);box-shadow:0 0 8px rgba(22,101,52,.4)}
+  .tl-t{font-size:13px;font-weight:500}
+  .tl-s{font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:2px}
+  .pm-foot{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)}
+
+  /* Dashboard */
+  .dash{padding:20px}
+  .dash-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+  .dash-kpi{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#FFFFFF}
+  .dash-kpi .k{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+  .dash-kpi .v{font-family:'Archivo',system-ui,-apple-system,sans-serif;font-size:26px;letter-spacing:-.035em;margin-top:6px;font-weight:800}
+  .dash-kpi .d{font-size:11px;color:var(--good);font-family:'JetBrains Mono',monospace;margin-top:4px}
+  .dash-kpi .d.down{color:var(--danger)}
+  .dash-chart{border:1px solid var(--line);border-radius:12px;padding:18px;background:#FFFFFF}
+  .dash-chart .ch-top{display:flex;justify-content:space-between;margin-bottom:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+  .dash-chart .ch-top .lg{display:flex;gap:14px}
+  .dash-chart .ch-top .lg span{display:inline-flex;align-items:center;gap:6px;color:var(--sub)}
+  .dash-chart .ch-top .lg .sw{width:8px;height:8px;border-radius:2px}
+  .bars{display:flex;gap:10px;align-items:flex-end;height:120px;padding-top:10px}
+  .bars .col{flex:1;display:flex;flex-direction:column;gap:3px;justify-content:flex-end;align-items:stretch;position:relative}
+  .bars .col .b{width:100%;border-radius:3px}
+  .bars .col .b1{background:var(--accent);transition:filter .15s}
+  .bars .col .b2{background:var(--accent-2);opacity:.55}
+  .bars .col:hover .b1{filter:brightness(1.15)}
+  .bars .col .tip{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#0B0B10;color:#FFFFFF;padding:6px 10px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:11px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s;z-index:5}
+  .bars .col:hover .tip{opacity:1}
+  .bars .lb{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-align:center;margin-top:6px}
+
+  /* Signal */
+  .signal{margin:80px 0 0;padding:60px 40px;border:1px solid var(--line);border-radius:var(--radius-lg);background:radial-gradient(600px 300px at 100% 0%,rgba(30,91,255,.10),transparent 60%),linear-gradient(180deg,var(--panel),var(--ink-2))}
+  .signal .k{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+  .signal blockquote{margin:0;font-size:clamp(22px,2.4vw,30px);line-height:1.25;letter-spacing:-.025em;font-weight:700;max-width:32ch;font-family:'Archivo',system-ui,-apple-system,sans-serif}
+  .signal blockquote .italic{font-weight:400;font-style:italic;color:var(--accent-2)}
+  .signal .who{margin-top:20px;color:var(--muted);font-size:14px}
+
+  /* Agents grid */
+  .agents-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+  .agent{border:1px solid var(--line);border-radius:var(--radius);padding:22px;background:linear-gradient(180deg,var(--panel),var(--ink-2));transition:transform .2s,border-color .2s}
+  .agent:hover{transform:translateY(-3px);border-color:var(--line-2)}
+  .agent .code{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  .agent h3{font-size:18px;margin:10px 0 8px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+  .agent h3 .blip{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)}
+  .agent p{color:var(--sub);margin:0;font-size:14px;line-height:1.55}
+  .agent .stat{margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent-deep)}
+
+  /* Compare */
+  table.compare{width:100%;border-collapse:separate;border-spacing:0;margin-top:36px;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;font-size:14px}
+  table.compare th,table.compare td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line)}
+  table.compare thead th{background:var(--ink-2);font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:500}
+  table.compare tr:last-child td{border-bottom:none}
+  table.compare td.relay{background:rgba(30,91,255,.08);color:var(--text);font-weight:500}
+  table.compare td.yes{color:var(--good)}
+  table.compare td.partial{color:#A16207}
+  table.compare td.no{color:var(--danger)}
+  table.compare tr.relay-row td{background:rgba(30,91,255,.09);border-top:1px solid rgba(30,91,255,.25)}
+  table.compare tr.relay-row td:first-child{font-weight:600}
+
+  /* Pricing */
+  .price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+  .price{border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px 24px;background:linear-gradient(180deg,var(--panel),var(--ink-2));position:relative}
+  .price.featured{border-color:var(--accent);box-shadow:0 20px 60px -20px rgba(30,91,255,.28)}
+  .price .tier{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  .price h3{font-size:22px;margin:8px 0 12px;letter-spacing:-.01em}
+  .price .cost{font-size:36px;letter-spacing:-.035em;line-height:1;font-family:'Archivo',system-ui,-apple-system,sans-serif;font-weight:800}
+  .price .cost small{font-size:14px;color:var(--muted);font-weight:400;letter-spacing:0;font-family:'Inter',sans-serif}
+  .price ul{list-style:none;padding:0;margin:22px 0 22px;font-size:14px}
+  .price li{padding:7px 0;color:var(--sub);display:flex;align-items:flex-start;gap:10px}
+  .price li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);margin-top:7px;flex-shrink:0}
+  .price .btn{width:100%;justify-content:center}
+  .price .tag-pro{position:absolute;top:-12px;right:20px;background:var(--accent);color:#FFFFFF;padding:4px 10px;border-radius:999px;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em}
+
+  /* FAQ */
+  details.faq{border-bottom:1px solid var(--line);padding:22px 0;cursor:pointer}
+  details.faq[open] summary{color:var(--text)}
+  details.faq summary{list-style:none;font-size:18px;color:var(--sub);display:flex;align-items:center;justify-content:space-between;font-weight:500}
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq summary::after{content:'+';color:var(--accent);font-size:24px;transition:transform .2s}
+  details.faq[open] summary::after{transform:rotate(45deg)}
+  details.faq .a{padding-top:14px;color:var(--sub);font-size:15px;line-height:1.65;max-width:75ch}
+
+  /* Script snippet */
+  .script{margin-top:20px;border:1px solid var(--line);border-radius:10px;background:#0B0B10;color:#E7EAF0;padding:16px 18px;font-family:'JetBrains Mono',monospace;font-size:12.5px;line-height:1.6;overflow:auto}
+  .script .tok{color:#9AB5FF}
+  .script .str{color:#BEEABD}
+  .script .cm{color:#7A8593}
+
+  /* CTA */
+  .cta-block{margin:40px 0 0;padding:80px 40px;text-align:center;border:1px solid var(--line);border-radius:var(--radius-lg);background:radial-gradient(500px 250px at 50% 0%,rgba(30,91,255,.14),transparent 60%),linear-gradient(180deg,var(--panel),var(--ink-2))}
+  .cta-block h2{margin:0 auto 14px;max-width:18ch}
+  .cta-block p{color:var(--sub);margin:0 auto 28px;max-width:52ch}
+  .cta-block form{display:flex;gap:10px;justify-content:center;max-width:460px;margin:0 auto;flex-wrap:wrap}
+  .cta-block input[type=email]{flex:1;min-width:220px;padding:14px 18px;border-radius:999px;border:1px solid var(--line-2);background:#FFFFFF;color:var(--text);font:inherit;font-size:15px}
+  .cta-block input[type=email]::placeholder{color:var(--muted)}
+  .cta-block input[type=email]:focus{outline:none;border-color:var(--accent)}
+  .cta-block .note{margin-top:14px;color:var(--muted);font-size:13px;font-family:'JetBrains Mono',monospace}
+
+  /* Footer */
+  footer.foot{margin-top:80px;padding:60px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+  footer .row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+  footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-bottom:40px}
+  footer .cols h5{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--sub);margin:0 0 14px;font-weight:500}
+  footer .cols a{display:block;color:var(--muted);padding:5px 0}
+  footer .cols a:hover{color:var(--text)}
+
+  @media (max-width:940px){
+    .mock-body{grid-template-columns:1fr;min-height:auto}
+    .mock-nav,.mock-aside{display:none}
+    .mock-main{border-right:none}
+    .tax-grid{grid-template-columns:repeat(2,1fr)}
+    .outcomes-grid{grid-template-columns:1fr 1fr}
+    .agents-grid{grid-template-columns:1fr}
+    .price-grid{grid-template-columns:1fr 1fr}
+    .nav-links{display:none}
+    footer .cols{grid-template-columns:1fr 1fr}
+    .hero{padding:80px 0 40px}
+    section.s{padding:72px 0}
+    .outcome-block{grid-template-columns:1fr;gap:28px;padding:56px 0}
+    .outcome-block.flip{grid-template-columns:1fr}
+    .outcome-block.flip .ob-copy{order:1}
+    .outcome-block.flip .ob-visual{order:2}
+    .split-mock{grid-template-columns:1fr}
+    .dash-grid{grid-template-columns:1fr 1fr}
+    .logos{gap:32px}
+    .logos .wm{font-size:18px}
+    .manifesto-grid{grid-template-columns:1fr;gap:30px}
+    .fc-row{grid-template-columns:110px 1fr 70px}
+    .fc-sub{padding-left:124px}
+    .fc-gap{grid-template-columns:1fr}
+  }
+  @media (max-width:600px){
+    .tax-grid{grid-template-columns:1fr}
+    .outcomes-grid{grid-template-columns:1fr}
+    .price-grid{grid-template-columns:1fr}
+    .tax-total{flex-direction:column;align-items:flex-start;gap:8px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap row">
+    <div class="logo">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E5BFF"/><stop offset="1" stop-color="#4B7AFF"/></linearGradient></defs>
+        <rect x="4" y="4" width="32" height="32" rx="9" fill="none" stroke="url(#lg)" stroke-width="2"/>
+        <path d="M12 24 L18 16 L24 24 L30 16" stroke="url(#lg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      Relay
+    </div>
+    <div class="nav-links">
+      <div class="has-menu" id="productsToggle" aria-haspopup="true" aria-expanded="false">Products</div>
+      <a href="#pricing">Pricing</a>
+      <a href="#compare">Compare</a>
+      <a href="#faq">Resources</a>
+    </div>
+    <a class="btn btn-primary" href="#waitlist">Join the waitlist →</a>
+  </div>
+
+  <!-- Products mega-menu -->
+  <div class="mega" id="productsMega" role="menu">
+    <div class="mega-inner">
+      <div class="mega-intro">
+        <h4>The Relay Platform</h4>
+        <p>An agentic CRM built on one data model. Twelve first-party agents. Half the TCO of HubSpot. Every Hub is included in every plan.</p>
+        <div class="pill-links">
+          <a href="#waitlist"><span class="ico">R</span> Free migration from HubSpot</a>
+          <a href="#overview"><span class="ico" style="background:#0B0B10">→</span> Overview of all Hubs</a>
+        </div>
+      </div>
+      <div class="hubs-grid">
+        <a class="hub-item" href="#traffic">
+          <div class="hub-head"><span class="hub-ico">T</span><h5>Traffic Hub</h5></div>
+          <p class="hub-sub">Campaigns, webinars, and landing pages that bring qualified buyers to your site.</p>
+          <span class="hub-link">Campaign · Webinar · Landing Page agents →</span>
+        </a>
+        <a class="hub-item" href="#leads">
+          <div class="hub-head"><span class="hub-ico">L</span><h5>Leads Hub</h5></div>
+          <p class="hub-sub">De-anonymize site traffic, sequence outbound, book meetings without a rep lifting a finger.</p>
+          <span class="hub-link">Sources · SDR · Sequencer agents →</span>
+        </a>
+        <a class="hub-item" href="#revenue">
+          <div class="hub-head"><span class="hub-ico">$</span><h5>Revenue Hub</h5></div>
+          <p class="hub-sub">Call coaching, sales forecasting, contracts and proposals with open tracking built in.</p>
+          <span class="hub-link">Call · Forecast · Documents agents →</span>
+        </a>
+        <a class="hub-item" href="#retention">
+          <div class="hub-head"><span class="hub-ico">S</span><h5>Service Hub</h5></div>
+          <p class="hub-sub">Ticket triage, health scoring, QBR prep, and expansion signals for every account.</p>
+          <span class="hub-link">Service · Reporting agents →</span>
+        </a>
+        <a class="hub-item" href="#agents">
+          <div class="hub-head"><span class="hub-ico">AI</span><h5>Relay AI</h5></div>
+          <p class="hub-sub">The agent fleet that powers every Hub. One context graph, one identity, one audit log.</p>
+          <span class="hub-link">12 first-party agents →</span>
+        </a>
+        <a class="hub-item" href="#dash">
+          <div class="hub-head"><span class="hub-ico">C</span><h5>Smart CRM</h5></div>
+          <p class="hub-sub">Flexible data model, pipeline views, and reporting. The core every Hub writes into.</p>
+          <span class="hub-link">Objects · Views · Dashboards →</span>
+        </a>
+        <a class="hub-item" href="#leads">
+          <div class="hub-head"><span class="hub-ico">SC</span><h5>Sources Script<span class="hub-badge">Beta</span></h5></div>
+          <p class="hub-sub">A single line of JS turns anonymous visitors into named accounts and buying-intent signals.</p>
+          <span class="hub-link">Install &lt;script&gt; · ICP match →</span>
+        </a>
+        <a class="hub-item" href="#compare">
+          <div class="hub-head"><span class="hub-ico">+</span><h5>Marketplace</h5></div>
+          <p class="hub-sub">Connect Google Ads, Xero, Stripe, Slack, Gmail, and 200+ tools. Top-down forecasts work out of the box.</p>
+          <span class="hub-link">Browse integrations →</span>
+        </a>
+        <a class="hub-item" href="#pricing">
+          <div class="hub-head"><span class="hub-ico">SB</span><h5>Small Business Bundle</h5></div>
+          <p class="hub-sub">All Hubs, one price. Built for teams of 5 to 50. No per-seat inflation, no Sales Hub Pro gates.</p>
+          <span class="hub-link">See pricing →</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <div class="badge"><span class="dot"></span> Now in private beta, April 2026</div>
+  <h1 class="hero-title">Let the CRM <span class="italic">work for you.</span></h1>
+  <p class="hero-sub">Your job is selling and keeping clients. Relay is the agentic CRM that does everything else. Twelve first-party agents capture every lead, run every campaign and webinar, send every contract, forecast every quarter, and write every report, so your week isn't spent feeding a database. Half the TCO of HubSpot.</p>
+  <div class="hero-cta">
+    <a class="btn btn-primary btn-lg" href="#waitlist">Start free migration →</a>
+    <a class="btn btn-ghost btn-lg" href="#traffic">See how it works</a>
+  </div>
+  <div class="hero-meta">$0 onboarding · no partner required · 12-month contract optional</div>
+  <div class="hero-stats">
+    <div class="stat"><div class="big">11 hrs</div><div class="lbl">given back to each rep every week, vs. traditional CRM admin</div></div>
+    <div class="stat"><div class="big">+38%</div><div class="lbl">more qualified leads captured from your existing site traffic</div></div>
+    <div class="stat"><div class="big">49%</div><div class="lbl">lower Year 1 TCO vs. a stacked HubSpot deployment (AU)</div></div>
+  </div>
+</header>
+
+<!-- Companies strip -->
+<div class="logos-strip">
+  <div class="wrap">
+    <p class="logos-kicker">Built by operators from</p>
+    <div class="logos">
+      <span class="wm">amazon</span>
+      <span class="wm serif">Google</span>
+      <span class="wm mono">OMD</span>
+      <span class="wm">Reckitt</span>
+      <span class="wm serif">Unilever</span>
+      <span class="wm mono">Atlassian</span>
+      <span class="wm">Canva</span>
+    </div>
+  </div>
+</div>
+
+<!-- Manifesto -->
+<section class="s wrap" style="padding:72px 0 40px">
+  <div class="manifesto-grid">
+    <div>
+      <div class="eyebrow">The shift</div>
+      <h2>Sellers shouldn't spend their week <span class="italic">updating a database.</span></h2>
+      <p class="lede">The average B2B rep spends 28% of their week inside the CRM: logging calls, updating stages, chasing forecasts, copy-pasting into sequences. Relay flips that. The agents do the CRM work. You do the customer work.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div class="kpi-flip">
+        <div class="k-old">Before Relay</div>
+        <ul class="k-list bad">
+          <li>Update 40 deal stages</li>
+          <li>Log 12 call summaries</li>
+          <li>Build the weekly forecast</li>
+          <li>Draft 80 follow-up emails</li>
+          <li>Chase 6 missing contracts</li>
+        </ul>
+      </div>
+      <div class="kpi-flip good-card">
+        <div class="k-old">With Relay</div>
+        <ul class="k-list good">
+          <li>Talk to customers</li>
+          <li>Close the quarter</li>
+          <li>Keep the ones you won</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hero mock -->
+<div class="wrap" style="margin-top:20px">
+  <div class="hero-mock">
+    <div class="mock-head">
+      <div class="mock-dots"><span></span><span></span><span></span></div>
+      <div class="mock-tabs" id="mockTabs">
+        <span class="active" data-tab="pipeline">pipeline</span>
+        <span data-tab="inbox">inbox</span>
+        <span data-tab="campaigns">campaigns</span>
+        <span data-tab="agents">agents</span>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)">relay.cx / workspace / acme</div>
+    </div>
+    <div class="mock-body">
+      <aside class="mock-nav" id="mockNav">
+        <div class="section">Workspace</div>
+        <div class="item active" data-nav="pipeline"><span class="dot-s"></span> Pipeline <span class="kbd">G P</span></div>
+        <div class="item" data-nav="inbox">Inbox</div>
+        <div class="item" data-nav="people">People</div>
+        <div class="item" data-nav="companies">Companies</div>
+        <div class="item" data-nav="campaigns">Campaigns</div>
+        <div class="item" data-nav="webinars">Webinars</div>
+        <div class="item" data-nav="tickets">Tickets</div>
+        <div class="section">Agents</div>
+        <div class="item" data-nav="sources">Sources</div>
+        <div class="item" data-nav="campaign">Campaign</div>
+        <div class="item" data-nav="webinar">Webinar</div>
+        <div class="item" data-nav="sdr">SDR</div>
+        <div class="item" data-nav="sequencer">Sequencer</div>
+        <div class="item" data-nav="call">Call</div>
+        <div class="item" data-nav="forecast">Forecast</div>
+        <div class="item" data-nav="documents">Documents</div>
+        <div class="item" data-nav="service">Service</div>
+        <div class="item" data-nav="reporting">Reporting</div>
+      </aside>
+
+      <!-- VIEW : PIPELINE -->
+      <div class="mock-main view" data-view="pipeline" id="viewPipeline">
+        <div class="view-toolbar">
+          <span class="chip-filter active" data-stage="all">All · 5</span>
+          <span class="chip-filter" data-stage="Qualified">Qualified · 1</span>
+          <span class="chip-filter" data-stage="Discovery">Discovery · 1</span>
+          <span class="chip-filter" data-stage="Proposal">Proposal · 1</span>
+          <span class="chip-filter" data-stage="Negotiation">Negotiation · 1</span>
+          <span class="chip-filter" data-stage="Closed won">Closed won · 1</span>
+        </div>
+        <div class="mock-row header"><div>Company</div><div>Stage</div><div>Owner</div><div>Next step</div></div>
+        <div class="mock-row" data-stage="Discovery" data-detail="Segments is evaluating Relay vs HubSpot. SDR agent drafted a follow-up email pointing at the TCO calculator. Meeting booked for Thursday."><div><span class="avatar">S</span>Segments</div><div><span class="pill">Discovery</span></div><div>Abdi</div><div><span class="pill agent">Agent · drafted email</span></div></div>
+        <div class="mock-row" data-stage="Proposal" data-detail="Atlas Labs received the proposal Tue 9:12am. Opened 4 times, forwarded to CEO, signed Wed 11:02am. Onboarding agent now active."><div><span class="avatar" style="background:linear-gradient(135deg,#4B7AFF,#1E5BFF)">A</span>Atlas Labs</div><div><span class="pill">Proposal</span></div><div>Maya</div><div><span class="pill human">Human · call booked</span></div></div>
+        <div class="mock-row" data-stage="Negotiation" data-detail="Northwind MSA went out Friday. Agent is monitoring the shared room for activity; 2 procurement stakeholders have viewed."><div><span class="avatar" style="background:linear-gradient(135deg,#0F6B4A,#1E5BFF)">N</span>Northwind</div><div><span class="pill">Negotiation</span></div><div>Jun</div><div><span class="pill agent">Agent · waiting on MSA</span></div></div>
+        <div class="mock-row" data-stage="Closed won" data-detail="Panorama signed AU$94k. Onboarding agent spun up a workspace, migrated their HubSpot, and set up week-one report."><div><span class="avatar" style="background:linear-gradient(135deg,#B5432A,#1E5BFF)">P</span>Panorama</div><div><span class="pill">Closed won</span></div><div>Abdi</div><div><span class="pill agent">Agent · onboarding started</span></div></div>
+        <div class="mock-row" data-stage="Qualified" data-detail="Vellum Co came in via the SEO campaign. Sources matched them to the target account list; owner auto-assigned by round-robin."><div><span class="avatar" style="background:linear-gradient(135deg,#1E5BFF,#0F6B4A)">V</span>Vellum Co</div><div><span class="pill">Qualified</span></div><div>Unassigned</div><div><span class="pill agent">Agent · assigning owner</span></div></div>
+        <div class="row-detail" id="rowDetail">Click a row to see the agent's last update.</div>
+      </div>
+
+      <!-- VIEW : INBOX -->
+      <div class="mock-main view" data-view="inbox" id="viewInbox" style="display:none">
+        <div class="view-toolbar"><span class="chip-filter active">All · 6</span><span class="chip-filter">Needs reply · 3</span><span class="chip-filter">Agent drafted · 2</span></div>
+        <div class="inbox-item"><span class="avatar">D</span><div><div class="ib-from">david@atlas.co <span class="tag" style="margin-left:6px">signed</span></div><div class="ib-sub">Re: Proposal · let's go</div><div class="ib-prev">Great, happy to proceed. Signed and forwarded to finance.</div></div><div class="ib-time">2m</div></div>
+        <div class="inbox-item"><span class="avatar" style="background:linear-gradient(135deg,#4B7AFF,#1E5BFF)">M</span><div><div class="ib-from">maria@atlas.co <span class="tag" style="margin-left:6px">draft ready</span></div><div class="ib-sub">Re: Discovery call recap</div><div class="ib-prev">Call agent drafted a follow-up covering pricing, timeline, and next steps. Review and send.</div></div><div class="ib-time">11m</div></div>
+        <div class="inbox-item"><span class="avatar" style="background:linear-gradient(135deg,#0F6B4A,#1E5BFF)">J</span><div><div class="ib-from">j.moore@northwind.com</div><div class="ib-sub">Quick question on SLA</div><div class="ib-prev">Can you confirm the 99.9% applies to the EU instance? Service agent has drafted a reply.</div></div><div class="ib-time">32m</div></div>
+      </div>
+
+      <!-- VIEW : CAMPAIGNS -->
+      <div class="mock-main view" data-view="campaigns" id="viewCampaigns" style="display:none">
+        <div class="view-toolbar"><span class="chip-filter active">Live · 3</span><span class="chip-filter">Draft · 2</span><span class="chip-filter">Webinar · 1</span></div>
+        <div class="camp-item"><div><div class="camp-name">Q2 reactivation · 840 contacts</div><div class="camp-sub">3 emails · landing page · LinkedIn retarget · goal AU$280k</div></div><div class="camp-stat"><div class="cs-v">22%</div><div class="cs-k">open</div></div><div class="camp-stat"><div class="cs-v">41</div><div class="cs-k">mtgs</div></div></div>
+        <div class="camp-item"><div><div class="camp-name">Webinar · From Hubs to Agents</div><div class="camp-sub">Thu 2pm · 412 registered · promo + reminders live</div></div><div class="camp-stat"><div class="cs-v">68%</div><div class="cs-k">confirm</div></div><div class="camp-stat"><div class="cs-v">312</div><div class="cs-k">new regs</div></div></div>
+        <div class="camp-item"><div><div class="camp-name">AU mid-market ABM</div><div class="camp-sub">42 target accounts · multi-touch · SDR agent on point</div></div><div class="camp-stat"><div class="cs-v">18</div><div class="cs-k">engaged</div></div><div class="camp-stat"><div class="cs-v">6</div><div class="cs-k">mtgs</div></div></div>
+      </div>
+
+      <!-- VIEW : AGENTS -->
+      <div class="mock-main view" data-view="agents" id="viewAgents" style="display:none">
+        <div class="view-toolbar"><span class="chip-filter active">All · 12</span><span class="chip-filter">Running · 7</span><span class="chip-filter">Paused · 0</span></div>
+        <div class="agents-list">
+          <div class="al-item"><span class="blip"></span><div class="al-name">Sources</div><div class="al-sub">84 visitors identified today · 11 auto-routed</div><div class="al-stat">running</div></div>
+          <div class="al-item"><span class="blip"></span><div class="al-name">SDR</div><div class="al-sub">Sent 62 touches · booked 4 meetings</div><div class="al-stat">running</div></div>
+          <div class="al-item"><span class="blip"></span><div class="al-name">Webinar</div><div class="al-sub">Event Thu 2pm · reminders queued</div><div class="al-stat">running</div></div>
+          <div class="al-item"><span class="blip"></span><div class="al-name">Forecast</div><div class="al-sub">Reconciling top-down + bottoms-up · gap AU$430k</div><div class="al-stat">running</div></div>
+          <div class="al-item"><span class="blip"></span><div class="al-name">Documents</div><div class="al-sub">2 proposals sent · 4 opens tracked</div><div class="al-stat">running</div></div>
+          <div class="al-item"><span class="blip"></span><div class="al-name">Reporting</div><div class="al-sub">Friday report scheduled · dashboard attached</div><div class="al-stat">scheduled</div></div>
+        </div>
+      </div>
+
+      <aside class="mock-aside">
+        <h4>Agents, live</h4>
+        <div class="agent-card"><div class="name"><span class="blip"></span> Sources</div><div class="line">Identified 84 anonymous visitors today. 11 matched to target accounts.</div></div>
+        <div class="agent-card"><div class="name"><span class="blip"></span> Forecast</div><div class="line">Q3 rolled. Gap to target: AU$430k. 3 actions proposed.</div></div>
+        <div class="agent-card"><div class="name"><span class="blip"></span> Documents</div><div class="line">Atlas Labs proposal opened 4× by 2 stakeholders. Signed.</div></div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- Why now -->
+<section class="s wrap">
+  <div class="eyebrow">Why now</div>
+  <h2>Your CRM bill is <span class="italic">four compounding surcharges.</span></h2>
+  <p class="lede">HubSpot's list price looks reasonable. The invoice isn't. By the time a 50-person B2B company has marketing automation, a help desk, a sequencer, and a partner on retainer, Year 1 spend in Australia lands between AU$130,000 and AU$230,000. Relay lands the same team at roughly half that, permanently.</p>
+  <div class="tax-grid">
+    <div class="tax-card"><div class="num">1×</div><h3>Module stacking</h3><p>Marketing Hub + Sales Hub + Service Hub + Ops Hub. Mid-market list is about US$9,500 per month before add-ons.</p></div>
+    <div class="tax-card"><div class="num">2×</div><h3>Contact-tier overages</h3><p>Crossing 50k marketing contacts hikes the bill. Crossing 100k hikes it again. Invisible at purchase, painful at renewal.</p></div>
+    <div class="tax-card"><div class="num">3×</div><h3>Mandatory onboarding</h3><p>US$1,500 to US$7,000 per Hub. Not optional. Counts as a purchase condition, not a service you asked for.</p></div>
+    <div class="tax-card"><div class="num">4×</div><h3>Implementation partner</h3><p>AU$25k to AU$95k+ per engagement. Partners earn 20% of your subscription in perpetuity on top.</p></div>
+  </div>
+  <div class="tax-total">
+    <div><div class="k">50-person B2B · Year 1 total (AU$)</div><div style="margin-top:6px;color:var(--muted);font-size:13px">Same team, same scope</div></div>
+    <div style="display:flex;gap:40px;flex-wrap:wrap">
+      <div><div class="k">HubSpot</div><div class="v bad">≈ $132,000</div></div>
+      <div><div class="k">Relay</div><div class="v good">≈ $67,000</div></div>
+      <div><div class="k">Saving</div><div class="v" style="color:var(--accent-2)">≈ 49%</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Outcomes overview -->
+<section class="s wrap" id="outcomes">
+  <div class="eyebrow">Four outcomes, one platform</div>
+  <h2>Stop buying tools. <span class="italic">Buy outcomes.</span></h2>
+  <p class="lede">Relay isn't organised around modules you have to stitch together. It's organised around the four things a B2B revenue team actually gets paid to do: drive traffic, capture leads, close revenue, and keep customers. Every agent and feature maps back to one of them.</p>
+  <div class="outcomes-grid">
+    <div class="outcome-card"><div class="num">Outcome 01</div><h3>More traffic</h3><p>Plan campaigns, run webinars, and spin up landing pages without a growth team on standby.</p><div class="agents"><span class="chip">Campaign</span><span class="chip">Webinar</span><span class="chip">Landing Page</span></div></div>
+    <div class="outcome-card"><div class="num">Outcome 02</div><h3>More leads</h3><p>Reveal the companies already on your site, run outbound, and automate every nurture sequence.</p><div class="agents"><span class="chip">Sources</span><span class="chip">SDR</span><span class="chip">Sequencer</span></div></div>
+    <div class="outcome-card"><div class="num">Outcome 03</div><h3>More revenue</h3><p>Capture every call, forecast both ways, send the proposal, see when they read it.</p><div class="agents"><span class="chip">Call</span><span class="chip">Forecast</span><span class="chip">Documents</span></div></div>
+    <div class="outcome-card"><div class="num">Outcome 04</div><h3>More retention</h3><p>Triage every ticket, flag churn risk, and ship a weekly report the CEO actually reads.</p><div class="agents"><span class="chip">Service</span><span class="chip">Reporting</span></div></div>
+  </div>
+</section>
+
+<!-- OUTCOME 1 : TRAFFIC -->
+<section class="wrap" id="traffic">
+  <div class="outcome-block">
+    <div class="ob-copy">
+      <div class="ob-kicker">Outcome 01 · Traffic</div>
+      <h2 class="ob-title">Run a webinar like <span class="italic">a whole marketing team.</span></h2>
+      <p class="lede">Webinars are the highest-intent top-of-funnel channel B2B has. They're also the one most teams run badly because of the ops load. Relay runs the entire play: promo campaign, landing page, reminders, live event, replay clip reel, and SDR follow-up on everyone who registered.</p>
+      <ul class="ob-list">
+        <li><span class="ag">Webinar</span><div><span class="t">End-to-end event runner.</span> Registration page, calendar invites, 3-step reminder sequence, live polling, Q&amp;A capture, replay clip reel, and a segmented follow-up for attendees vs. no-shows.</div></li>
+        <li><span class="ag">Campaign</span><div><span class="t">Promo campaign, written for you.</span> Email blast, LinkedIn posts, paid retargeting creative, and an on-site banner, all generated from one webinar brief and attributed back to pipeline.</div></li>
+        <li><span class="ag">Landing Page</span><div><span class="t">Registration page in 3 minutes.</span> Branded, on-domain, A/B tested. No dev, no Unbounce, no Webflow bill. Publishes the moment the webinar brief is signed off.</div></li>
+      </ul>
+      <a class="btn btn-ghost" href="#waitlist">See the webinar workflow →</a>
+    </div>
+    <div class="ob-visual">
+      <div style="padding:20px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">
+          <span>Webinar · Thu 2pm AEST</span>
+          <span style="color:var(--good)">● live build</span>
+        </div>
+        <div class="mini-card" style="margin-bottom:12px">
+          <div class="k">Event</div>
+          <div class="t">From Hubs to Agents: a live CRM migration</div>
+          <div class="thumb"><span class="play">▶</span></div>
+          <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap">
+            <span class="tag">412 registered</span>
+            <span class="tag">/webinar live</span>
+            <span class="tag">on-demand after</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr;gap:8px">
+          <div class="wf-node"><div class="ico">✉</div><div><div class="title">Promo email · T-10 days</div><div class="sub">sent to 14,200 subscribers · 22% open · 312 new registrants</div></div><div class="stat">sent</div></div>
+          <div class="wf-node"><div class="ico">in</div><div><div class="title">LinkedIn + retargeting</div><div class="sub">organic posts + paid retargeting on site visitors · CPA AU$9</div></div><div class="stat">live</div></div>
+          <div class="wf-node"><div class="ico">✉</div><div><div class="title">Reminder · T-24h</div><div class="sub">dynamic calendar invite attached · 68% confirm rate</div></div><div class="stat">queued</div></div>
+          <div class="wf-node"><div class="ico">▶</div><div><div class="title">Live event + Q&amp;A capture</div><div class="sub">polls, questions, drop-off all logged to attendee records</div></div><div class="stat">Thu 2pm</div></div>
+          <div class="wf-node" style="border-color:rgba(30,91,255,.3);background:rgba(30,91,255,.04)"><div class="ico">★</div><div><div class="title">Follow-up · segmented</div><div class="sub">attendees → SDR queue · no-shows → replay · both routed to pipeline</div></div><div class="stat">auto</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOME 2 : LEADS -->
+<section class="wrap" id="leads" style="background:#FAFBFD;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:40px 0">
+  <div class="outcome-block flip">
+    <div class="ob-copy">
+      <div class="ob-kicker">Outcome 02 · Leads</div>
+      <h2 class="ob-title">Turn anonymous traffic into <span class="italic">named pipeline.</span></h2>
+      <p class="lede">Most B2B sites convert 2% of visitors. Relay captures the other 98%. Sources de-anonymises every business visitor, the SDR agent runs multi-channel outbound on the accounts that matter, and the Sequencer orchestrates every nurture flow without a marketing ops hire.</p>
+      <ul class="ob-list">
+        <li><span class="ag">Sources</span><div><span class="t">De-anonymise every business visitor.</span> Drop the Relay script on your site. See which companies (and, on opt-in, which people) visit every page, and auto-route to your SDR queue.</div></li>
+        <li><span class="ag">SDR</span><div><span class="t">Outbound on autopilot.</span> Research accounts, send personalised multi-channel sequences, handle replies, and book meetings. Every action logged and reversible.</div></li>
+        <li><span class="ag">Sequencer</span><div><span class="t">Visual email automation.</span> Build drag-and-drop sequences with branching logic, wait steps, goal tracking, and native AI rewrites. No Marketing Hub add-on.</div></li>
+      </ul>
+      <a class="btn btn-ghost" href="#sources">Install Sources in 60 seconds →</a>
+    </div>
+    <div class="ob-visual">
+      <div class="visitor-feed">
+        <div class="vf-head">
+          <span>sources · live feed</span>
+          <span class="live">live</span>
+        </div>
+        <div class="vf-row">
+          <div class="logo-sq" style="background:linear-gradient(135deg,#0F6B4A,#1E5BFF)">A</div>
+          <div><div style="font-weight:500">Atlas Labs</div><div class="meta">3 sessions · /pricing · /integrations · /webinar</div></div>
+          <div class="score">score 94</div>
+        </div>
+        <div class="vf-row">
+          <div class="logo-sq" style="background:linear-gradient(135deg,#B5432A,#1E5BFF)">P</div>
+          <div><div style="font-weight:500">Panorama Holdings</div><div class="meta">2 sessions · /saving · /agents</div></div>
+          <div class="score">score 87</div>
+        </div>
+        <div class="vf-row">
+          <div class="logo-sq" style="background:linear-gradient(135deg,#4B7AFF,#0F3AB5)">V</div>
+          <div><div style="font-weight:500">Vellum Co</div><div class="meta">1 session · /compare</div></div>
+          <div class="score low">score 62</div>
+        </div>
+        <div class="vf-row">
+          <div class="logo-sq">W</div>
+          <div><div style="font-weight:500">Wirefox Technologies</div><div class="meta">4 sessions · /pricing · /faq · /webinar replay</div></div>
+          <div class="score">score 96</div>
+        </div>
+        <div class="vf-foot">→ 11 of 84 visitors auto-routed to SDR Agent today</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sequencer workflow -->
+  <div class="outcome-block" id="sequencer" style="border-top:1px solid var(--line)">
+    <div class="ob-copy">
+      <div class="ob-kicker">Email automation</div>
+      <h2 class="ob-title">A real sequencer, <span class="italic">included.</span></h2>
+      <p class="lede">Drag-and-drop workflows with branching, goals, and AI rewrites. Not a marketing hub add-on, not a sequencing SKU. It ships in the base product for every seat.</p>
+      <ul class="ob-list">
+        <li><span class="ag">Branch</span><div><span class="t">Conditional paths</span> on opens, clicks, replies, deal stage, enrichment, and custom attributes.</div></li>
+        <li><span class="ag">Goals</span><div><span class="t">Goal-based exits.</span> Contact books a meeting or hits a stage, they leave the sequence automatically.</div></li>
+        <li><span class="ag">AI</span><div><span class="t">Rewrite, shorten, translate</span> any step with one click. Tone locked to your brand voice.</div></li>
+      </ul>
+    </div>
+    <div class="ob-visual">
+      <div class="workflow">
+        <div class="wf-head"><span>Workflow · Mid-market reactivation</span><span>active · 840 contacts</span></div>
+        <div class="wf-chain">
+          <div class="wf-node"><div class="ico">➜</div><div><div class="title">Entry · contact stalled 30+ days</div><div class="sub">trigger · pipeline stage = Qualified · last activity &gt; 30d</div></div><div class="stat">840</div></div>
+          <div class="wf-edge"></div>
+          <div class="wf-node"><div class="ico">✉</div><div><div class="title">Email 1 · soft re-open</div><div class="sub">AI rewrite from brand voice · day 0</div></div><div class="stat">→ 312 open</div></div>
+          <div class="wf-edge"></div>
+          <div class="wf-node"><div class="ico">?</div><div><div class="title">Branch · opened in 48h</div><div class="sub">yes → email 2 · no → LinkedIn step</div></div><div class="stat">branch</div></div>
+          <div class="wf-branch">
+            <div class="wf-node" style="border-color:rgba(22,101,52,.25)"><div class="ico" style="background:rgba(22,101,52,.08);color:var(--good);border-color:rgba(22,101,52,.25)">✓</div><div><div class="title">Email 2 · value proof</div><div class="sub">day 3 · 1 CTA · meeting link</div></div></div>
+            <div class="wf-node"><div class="ico">in</div><div><div class="title">LinkedIn connect</div><div class="sub">day 3 · SDR agent sends</div></div></div>
+          </div>
+          <div class="wf-edge"></div>
+          <div class="wf-node" style="border-color:rgba(30,91,255,.3);background:rgba(30,91,255,.04)"><div class="ico">★</div><div><div class="title">Goal · meeting booked</div><div class="sub">exit condition · logged to deal</div></div><div class="stat">41 goals</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sources install -->
+  <div class="outcome-block flip" id="sources" style="border-top:1px solid var(--line);padding-top:20px">
+    <div class="ob-copy">
+      <div class="ob-kicker">The Sources script</div>
+      <h2 class="ob-title">Drop one script. See <span class="italic">every company</span> on your site.</h2>
+      <p class="lede">Sources is Relay's visitor identification script. Drop it on your site, and every business visitor is de-anonymised in real time: company name, firmographics, visited pages, scroll depth, and a propensity score. Matched to target accounts, routed to your SDR queue, surfaced in your pipeline.</p>
+      <ul class="ob-list">
+        <li><span class="ag">Privacy</span><div><span class="t">B2B only, consent-forward.</span> Only identifies business IPs with reverse-DNS firmographics. Personal device identification is opt-in with a clear banner, GDPR and Australian Privacy Act aligned.</div></li>
+        <li><span class="ag">Routing</span><div><span class="t">Auto-route by rule.</span> High-intent pages + target account → SDR agent. Support pages → service agent. Careers page → ignored.</div></li>
+        <li><span class="ag">Attribution</span><div><span class="t">First-touch, always.</span> Every deal tied back to the first Sources visit. No UTMs required.</div></li>
+      </ul>
+    </div>
+    <div class="ob-visual">
+      <div class="script">
+<span class="cm">// Add once in your &lt;head&gt;</span><br>
+&lt;<span class="tok">script</span> src=<span class="str">"https://cdn.relay.cx/sources.js"</span><br>
+&nbsp;&nbsp;<span class="tok">data-workspace</span>=<span class="str">"acme"</span><br>
+&nbsp;&nbsp;<span class="tok">defer</span>&gt;&lt;/<span class="tok">script</span>&gt;<br><br>
+<span class="cm">// That's it. Visitors start identifying in ~60 seconds.</span>
+      </div>
+      <div style="padding:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">
+        <span>sources.js · 4.2kb · no cookies</span>
+        <span style="color:var(--good)">✓ installed on segments.com.au</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOME 3 : REVENUE -->
+<section class="wrap" id="revenue">
+  <div class="outcome-block">
+    <div class="ob-copy">
+      <div class="ob-kicker">Outcome 03 · Revenue</div>
+      <h2 class="ob-title">Move every deal forward. <span class="italic">Without a pipeline review.</span></h2>
+      <p class="lede">The Call agent joins every meeting, writes the update, and creates the next step. The Pipeline agent surfaces every deal at risk before Monday's stand-up. Pipeline review stops being a ritual and becomes a one-minute scan.</p>
+      <ul class="ob-list">
+        <li><span class="ag">Call</span><div><span class="t">Joins every call.</span> Captures structured notes, writes CRM updates, creates next-step tasks, and flags risk signals. Replaces Gong Starter and manual note-taking.</div></li>
+        <li><span class="ag">Pipeline</span><div><span class="t">Risk-scored every night.</span> Stalled deals, slipped commits, disengaged champions, and single-threaded risks surface before the weekly pipeline review.</div></li>
+        <li><span class="ag">Meetings</span><div><span class="t">One-link scheduling</span> with round-robin routing, buffer rules, and auto-created deals when a prospect books.</div></li>
+      </ul>
+    </div>
+    <div class="ob-visual">
+      <div class="split-mock">
+        <div class="mini-card" style="grid-column:1/-1">
+          <div class="k">Call summary · 11:42 AM</div>
+          <div class="t">Discovery with Atlas Labs, 3 stakeholders</div>
+          <div class="line" style="margin-top:8px">Budget confirmed (AU$90k). Timeline: start of Q3. Risk: single-threaded with VP Revenue; no exec sponsor identified yet.</div>
+          <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap">
+            <span class="tag">next step · intro to CRO</span>
+            <span class="tag">stage → Proposal</span>
+            <span class="tag">risk · single-thread</span>
+          </div>
+        </div>
+        <div class="mini-card">
+          <div class="k">Pipeline risk</div>
+          <div class="t" style="color:var(--danger)">4 deals at risk this week</div>
+          <div class="line">AU$240k · stalled 14+ days or slipped commit dates</div>
+        </div>
+        <div class="mini-card">
+          <div class="k">Next 5 meetings</div>
+          <div class="t">Fri 9am · Atlas Labs</div>
+          <div class="line">Call agent joining · brief pre-read attached</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forecasting -->
+  <div class="outcome-block flip" id="forecasting" style="border-top:1px solid var(--line)">
+    <div class="ob-copy">
+      <div class="ob-kicker">Forecasting</div>
+      <h2 class="ob-title">The forecast that <span class="italic">already matches</span> your ad spend target.</h2>
+      <p class="lede">Every revenue team forecasts twice: bottoms-up from account owners, and top-down from a number the CFO or the ads platform is holding them to. Relay runs both, in the same view, and surfaces the gap automatically. Connect Google Ads, Xero, Stripe, or QuickBooks once, and the top-down number updates daily.</p>
+      <ul class="ob-list">
+        <li><span class="ag">Bottoms-up</span><div><span class="t">Per-account forecasting.</span> Owners commit a quarterly or annual spend forecast on every account. Rolled up by segment, owner, region, or product line in one click.</div></li>
+        <li><span class="ag">Top-down</span><div><span class="t">Connected to your ad + finance stack.</span> Google Ads gives you a daily revenue goal. Xero and Stripe give you recurring and invoiced revenue. Relay reconciles both against pipeline and tells you the gap.</div></li>
+        <li><span class="ag">Forecast Agent</span><div><span class="t">Writes the commentary.</span> Every Friday: what moved, why, where the risk is, and which three actions close the gap. In plain English. Attached to the weekly report.</div></li>
+      </ul>
+    </div>
+    <div class="ob-visual">
+      <div class="forecast-mock">
+        <div class="fc-head">
+          <span>Q3 2026 forecast · all regions</span>
+          <span style="color:var(--good)">● connected: Google Ads, Xero, Stripe</span>
+        </div>
+        <div class="fc-row"><div class="fc-lbl">Top-down target</div><div class="fc-bar"><div class="fc-fill td" style="width:100%"></div></div><div class="fc-val">$2.40M</div></div>
+        <div class="fc-sub">Google Ads revenue goal $1.45M · Stripe ARR growth plan $950k</div>
+        <div class="fc-row"><div class="fc-lbl">Bottoms-up commit</div><div class="fc-bar"><div class="fc-fill bu" style="width:82%"></div></div><div class="fc-val">$1.97M</div></div>
+        <div class="fc-sub">Rolled from 142 accounts · 6 reps · confidence 84%</div>
+        <div class="fc-row"><div class="fc-lbl">Best case</div><div class="fc-bar"><div class="fc-fill bc" style="width:96%"></div></div><div class="fc-val">$2.30M</div></div>
+        <div class="fc-gap">
+          <div><div class="k">Gap to target</div><div class="v">$430k · 18%</div></div>
+          <div class="actions">
+            <div class="act">① Accelerate 4 Proposal deals · $260k</div>
+            <div class="act">② Reactivate 8 closed-lost Q1 · $180k</div>
+            <div class="act">③ Upsell 3 Enterprise renewals · $90k</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contracts + proposals -->
+  <div class="outcome-block" id="documents" style="border-top:1px solid var(--line)">
+    <div class="ob-copy">
+      <div class="ob-kicker">Contracts + proposals</div>
+      <h2 class="ob-title">Send the proposal. <span class="italic">See when they read it.</span></h2>
+      <p class="lede">Proposals and contracts live inside Relay, not in a US$95 per user per month PandaDoc bill. Send a proposal, watch the buyer open it, see which sections they spent time on, get notified when a stakeholder you've never met forwards it internally. E-sign built in.</p>
+      <ul class="ob-list">
+        <li><span class="ag">Documents</span><div><span class="t">Proposals, contracts, MSAs.</span> Drag-drop builder with brand-locked templates, pricing tables, and dynamic CRM fields. Auto-attach to the deal.</div></li>
+        <li><span class="ag">Tracking</span><div><span class="t">Section-level read tracking.</span> Every open, every forward, every page view, with time-on-section. Risk score updates when a proposal is opened by a new stakeholder.</div></li>
+        <li><span class="ag">E-sign</span><div><span class="t">Native, legally binding.</span> SOC 2 Type II, AES-256, audit trail. No DocuSign integration fee.</div></li>
+      </ul>
+    </div>
+    <div class="ob-visual">
+      <div class="proposal-mock">
+        <div class="pm-head">
+          <div><div class="pm-k">Proposal · Atlas Labs · Q3 platform</div><div class="pm-t">sent Tue 9:12am · AU$94,000 · 12-month</div></div>
+          <span class="pm-status">opened 4×</span>
+        </div>
+        <div class="pm-timeline">
+          <div class="tl-item"><span class="tl-dot"></span><div><div class="tl-t">Tue 9:12am · Sent by Maya K</div><div class="tl-s">delivered to maria@atlas.co</div></div></div>
+          <div class="tl-item"><span class="tl-dot ok"></span><div><div class="tl-t">Tue 9:48am · Opened by Maria (Head of Ops)</div><div class="tl-s">4m 22s · read Pricing, Timeline, Terms</div></div></div>
+          <div class="tl-item"><span class="tl-dot ok"></span><div><div class="tl-t">Tue 2:04pm · Forwarded → ceo@atlas.co</div><div class="tl-s">new stakeholder · not in CRM · auto-enriched</div></div></div>
+          <div class="tl-item"><span class="tl-dot ok"></span><div><div class="tl-t">Wed 8:30am · Opened by David T (CEO)</div><div class="tl-s">6m 51s · 3 views · focused on Pricing</div></div></div>
+          <div class="tl-item"><span class="tl-dot signed"></span><div><div class="tl-t">Wed 11:02am · Signed by David T</div><div class="tl-s">deal moved to Closed won · onboarding agent triggered</div></div></div>
+        </div>
+        <div class="pm-foot"><span>time to sign · 1d 2h</span><span>avg. for segment · 11 days</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOME 4 : RETENTION + REPORTING -->
+<section class="wrap" id="retention" style="background:#FAFBFD;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:40px 0">
+  <div class="outcome-block flip">
+    <div class="ob-copy">
+      <div class="ob-kicker">Outcome 04 · Retention</div>
+      <h2 class="ob-title">Keep the customers <span class="italic">you worked to win.</span></h2>
+      <p class="lede">The Service agent triages every inbound, drafts responses, and flags SLA risk. The Reporting agent ships a weekly dashboard the CEO actually reads. No Service Hub Pro, no Intercom Starter, no BI consultant on the side.</p>
+      <ul class="ob-list">
+        <li><span class="ag">Service</span><div><span class="t">Every ticket, triaged.</span> Drafts responses in your tone of voice, assigns owners, flags SLA risk, and summarises resolution patterns weekly.</div></li>
+        <li><span class="ag">Reporting</span><div><span class="t">One report, every Friday.</span> The Reporting agent writes a plain-English summary of what worked, what slipped, and what to fix next week. Then attaches the dashboard.</div></li>
+        <li><span class="ag">Dashboards</span><div><span class="t">Built-in, no BI tool.</span> Every dashboard below is a default, not a setup project. Customise by prompt or drag a widget.</div></li>
+      </ul>
+    </div>
+    <div class="ob-visual">
+      <div class="dash">
+        <div class="dash-grid">
+          <div class="dash-kpi"><div class="k">Pipeline</div><div class="v">$1.84M</div><div class="d">+12% w/w</div></div>
+          <div class="dash-kpi"><div class="k">Meetings booked</div><div class="v">64</div><div class="d">+8 vs last</div></div>
+          <div class="dash-kpi"><div class="k">NPS</div><div class="v">+47</div><div class="d down">-3 vs last</div></div>
+        </div>
+        <div class="dash-chart">
+          <div class="ch-top">
+            <span>Traffic → leads → deals, last 8 weeks</span>
+            <div class="lg"><span><span class="sw" style="background:var(--accent)"></span>Qualified leads</span><span><span class="sw" style="background:var(--accent-2);opacity:.55"></span>Deals created</span></div>
+          </div>
+          <div class="bars">
+            <div class="col"><span class="tip">W1 · 52 leads · 18 deals</span><div class="b b1" style="height:52px"></div><div class="b b2" style="height:18px"></div><div class="lb">W1</div></div>
+            <div class="col"><span class="tip">W2 · 66 leads · 24 deals</span><div class="b b1" style="height:66px"></div><div class="b b2" style="height:24px"></div><div class="lb">W2</div></div>
+            <div class="col"><span class="tip">W3 · 58 leads · 22 deals</span><div class="b b1" style="height:58px"></div><div class="b b2" style="height:22px"></div><div class="lb">W3</div></div>
+            <div class="col"><span class="tip">W4 · 78 leads · 30 deals</span><div class="b b1" style="height:78px"></div><div class="b b2" style="height:30px"></div><div class="lb">W4</div></div>
+            <div class="col"><span class="tip">W5 · 72 leads · 28 deals</span><div class="b b1" style="height:72px"></div><div class="b b2" style="height:28px"></div><div class="lb">W5</div></div>
+            <div class="col"><span class="tip">W6 · 90 leads · 34 deals</span><div class="b b1" style="height:90px"></div><div class="b b2" style="height:34px"></div><div class="lb">W6</div></div>
+            <div class="col"><span class="tip">W7 · 102 leads · 40 deals</span><div class="b b1" style="height:102px"></div><div class="b b2" style="height:40px"></div><div class="lb">W7</div></div>
+            <div class="col"><span class="tip">W8 · 114 leads · 48 deals</span><div class="b b1" style="height:114px"></div><div class="b b2" style="height:48px"></div><div class="lb">W8</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Signal -->
+<section class="wrap">
+  <div class="signal">
+    <div class="k">Signal · 19 Apr 2026 · Benioff on X</div>
+    <blockquote>"No browser required. <span class="italic">Our API is the UI.</span> All AI agents can access data, workflows, and tasks directly."</blockquote>
+    <div class="who">The incumbents have conceded the next interface layer. They haven't conceded the pricing layer.</div>
+  </div>
+</section>
+
+<!-- Agents fleet grid -->
+<section class="s wrap" id="agents">
+  <div class="eyebrow">The agent fleet</div>
+  <h2>Twelve agents. <span class="italic">Every one</span> replaces a budget line.</h2>
+  <p class="lede">Relay ships with twelve first-party agents. Seat pricing covers humans. Agent work is billed as capped usage credits with transparent per-action pricing, so you pay for work done, not logins.</p>
+  <div class="agents-grid">
+    <article class="agent"><div class="code">Agent · Sources</div><h3><span class="blip"></span> De-anonymises your site</h3><p>Drop the Relay script. Every business visitor is identified, scored, and routed. Replaces RB2B, Clearbit Reveal, and Snitcher.</p><div class="stat">replaces ≈ US$600 per month visitor tools</div></article>
+    <article class="agent"><div class="code">Agent · Campaign</div><h3><span class="blip"></span> Drafts every campaign</h3><p>Goal, ICP, date in. Sequence, landing page, form, attribution plan, and send schedule out. All editable before go-live.</p><div class="stat">replaces Marketing Hub Pro + agency retainer</div></article>
+    <article class="agent"><div class="code">Agent · Webinar</div><h3><span class="blip"></span> Runs webinars end to end</h3><p>Registration page, reminder flow, live polls, replay clips, post-event SDR handoff. One workflow, no Zoom Events tax.</p><div class="stat">replaces Zoom Events + Demio</div></article>
+    <article class="agent"><div class="code">Agent · Landing Page</div><h3><span class="blip"></span> Designs + publishes pages</h3><p>Branded landing pages from a prompt. A/B tests built in. Publishes to your domain. No Webflow or Unbounce bill.</p><div class="stat">replaces Unbounce + Webflow Starter</div></article>
+    <article class="agent"><div class="code">Agent · SDR</div><h3><span class="blip"></span> Runs outbound on a book</h3><p>Researches, sends, replies, and books. Multi-channel. Full provenance on every action and a revert button that works.</p><div class="stat">replaces Apollo + 11x + one SDR seat</div></article>
+    <article class="agent"><div class="code">Agent · Sequencer</div><h3><span class="blip"></span> Orchestrates every flow</h3><p>Drag-and-drop visual workflows with branching, goals, and AI rewrites. Ships for every seat, not as an add-on.</p><div class="stat">replaces Outreach Engage + ActiveCampaign</div></article>
+    <article class="agent"><div class="code">Agent · Call</div><h3><span class="blip"></span> Joins every meeting</h3><p>Captures structured notes, writes CRM updates, creates tasks, flags risk signals. Ready for the pipeline review.</p><div class="stat">replaces Gong Starter + note-taking</div></article>
+    <article class="agent"><div class="code">Agent · Forecast</div><h3><span class="blip"></span> Reconciles top-down + bottoms-up</h3><p>Pulls Google Ads, Xero, and Stripe for the top-down number. Rolls owners' account-level commits for the bottoms-up. Writes the commentary.</p><div class="stat">replaces Clari Starter + FP&amp;A consultant</div></article>
+    <article class="agent"><div class="code">Agent · Documents</div><h3><span class="blip"></span> Sends proposals + contracts</h3><p>Drag-drop proposals, MSAs, order forms. Section-level read tracking. Native e-sign. Auto-attached to the deal and scored for risk.</p><div class="stat">replaces PandaDoc + DocuSign Starter</div></article>
+    <article class="agent"><div class="code">Agent · Service</div><h3><span class="blip"></span> Triages every inbound</h3><p>Drafts responses, assigns owners, flags SLA risk, summarises resolution patterns. Learns your tone and KB.</p><div class="stat">replaces Service Hub Pro + Intercom Starter</div></article>
+    <article class="agent"><div class="code">Agent · Reporting</div><h3><span class="blip"></span> Writes the weekly report</h3><p>Plain-English Friday summary on traffic, pipeline, revenue, and retention. Attaches the dashboard. Emails the CEO.</p><div class="stat">replaces BI consultant + Looker Starter</div></article>
+    <article class="agent"><div class="code">Agent · Implementation</div><h3><span class="blip"></span> Migrates your old CRM</h3><p>Accepts HubSpot, Salesforce, Pipedrive, or CSV. Proposes a schema, migrates data, rebuilds automations, hands off a changelog.</p><div class="stat">replaces AU$25k to AU$95k partner invoice</div></article>
+  </div>
+</section>
+
+<!-- Compare -->
+<section class="s wrap" id="compare">
+  <div class="eyebrow">How we compare</div>
+  <h2>The only row that matters: <span class="italic">what ships with the product.</span></h2>
+  <p class="lede">Every AI-first CRM launched in the last 24 months. None of them combine a relational CRM spine with marketing, service, sales engagement, and a native agent fleet, which is the position Relay occupies.</p>
+  <table class="compare">
+    <thead><tr><th>Product</th><th>Core wedge</th><th>Agent-first</th><th>Marketing + Service</th><th>ACV band</th></tr></thead>
+    <tbody>
+      <tr><td>HubSpot</td><td>All-in-one platform</td><td class="partial">Retrofitted (Breeze)</td><td class="yes">Yes, via Hub stack</td><td>US$20k to US$120k</td></tr>
+      <tr><td>Salesforce</td><td>Enterprise depth</td><td class="yes">Agentforce + Headless 360</td><td class="yes">Yes, via product stack</td><td>US$80k+</td></tr>
+      <tr><td>Attio</td><td>Flexible relational CRM</td><td class="partial">AI attributes</td><td class="no">No</td><td>US$5k to US$25k</td></tr>
+      <tr><td>Folk</td><td>Lightweight contact CRM</td><td class="partial">AI drafts</td><td class="no">No</td><td>US$3k to US$12k</td></tr>
+      <tr><td>Day.ai</td><td>Conversational CRM</td><td class="yes">Yes, talk-to-CRM</td><td class="no">No</td><td>US$8k to US$20k</td></tr>
+      <tr><td>Clay</td><td>GTM enrichment</td><td class="yes">Claygent</td><td class="no">Sits on top of CRM</td><td>US$10k to US$50k+</td></tr>
+      <tr><td>11x / Rox</td><td>AI sales reps</td><td class="yes">Digital employees</td><td class="no">Sits on top of CRM</td><td>US$15k to US$60k+</td></tr>
+      <tr class="relay-row"><td>Relay</td><td class="relay">Traffic + Leads + Revenue + Retention, at 50% TCO</td><td class="yes">Native, 12 first-party</td><td class="yes">Yes, one data model</td><td>US$6k → US$80k</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Pricing -->
+<section class="s wrap" id="pricing">
+  <div class="eyebrow">Pricing</div>
+  <h2>One product. <span class="italic">Every outcome included.</span> Agents are the lever.</h2>
+  <p class="lede">No Hub stacking. No contact-tier overages. No mandatory onboarding SKU. Seat pricing covers humans; agent work is capped usage credits with transparent per-action cost.</p>
+  <div class="price-grid">
+    <div class="price">
+      <div class="tier">Starter</div><h3>Founder-led</h3>
+      <div class="cost">$49<small>/user/mo</small></div>
+      <ul><li>Up to 5 human seats</li><li>Sources, Campaign, Sequencer, Call, Documents agents</li><li>500 agent actions / month</li><li>All four outcomes</li></ul>
+      <a class="btn btn-ghost" href="#waitlist">Get early access</a>
+    </div>
+    <div class="price featured">
+      <div class="tag-pro">Most popular</div>
+      <div class="tier">Growth</div><h3>SMB B2B</h3>
+      <div class="cost">$89<small>/user/mo</small></div>
+      <ul><li>Up to 20 human seats</li><li>All 12 agents included</li><li>3,000 agent actions / month</li><li>Free HubSpot migration</li></ul>
+      <a class="btn btn-primary" href="#waitlist">Start free migration</a>
+    </div>
+    <div class="price">
+      <div class="tier">Scale</div><h3>Mid-market</h3>
+      <div class="cost">$149<small>/user/mo</small></div>
+      <ul><li>100 human seats included</li><li>15,000 agent actions / month</li><li>SSO, audit log, custom roles</li><li>Priority migration agent</li></ul>
+      <a class="btn btn-ghost" href="#waitlist">Talk to us</a>
+    </div>
+    <div class="price">
+      <div class="tier">Enterprise</div><h3>500+ / regulated</h3>
+      <div class="cost">Custom</div>
+      <ul><li>Custom agent capacity</li><li>VPC / dedicated tenancy</li><li>SOC 2 Type II, DPA, EU residency</li><li>Named implementation lead</li></ul>
+      <a class="btn btn-ghost" href="#waitlist">Contact sales</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="s wrap">
+  <div class="eyebrow">Questions</div>
+  <h2>The short answers.</h2>
+  <div style="margin-top:28px">
+    <details class="faq" open>
+      <summary>How is this different from HubSpot adding AI?</summary>
+      <div class="a">HubSpot's AI (Breeze) is bolted onto a product that was architected in 2014 around Hubs, contact tiers, and a partner ecosystem. Matching Relay's pricing would require HubSpot to cannibalise the partner channel that is currently its largest distribution asset. We don't have that constraint because we don't have a partner channel.</div>
+    </details>
+    <details class="faq">
+      <summary>How does your forecasting compare to Clari?</summary>
+      <div class="a">Clari is a forecasting tool that sits on top of your CRM. Relay's Forecast agent lives inside the CRM and reads directly from pipeline, Google Ads spend targets, Stripe ARR, and Xero invoices. You get the same bottoms-up rollup, plus the top-down target reconciliation, plus the plain-English commentary, without the US$85k Clari bill.</div>
+    </details>
+    <details class="faq">
+      <summary>Do I still need PandaDoc or DocuSign?</summary>
+      <div class="a">No. Relay Documents is a native proposal + contract builder with section-level read tracking and legally binding e-sign (SOC 2 Type II, AES-256). When your proposal is opened by a new stakeholder, the deal risk score updates automatically. No integration fee, no per-envelope pricing.</div>
+    </details>
+    <details class="faq">
+      <summary>How does Sources compare to RB2B or Clearbit Reveal?</summary>
+      <div class="a">Functionally similar for the core de-anonymisation job; the difference is that Sources sits inside the CRM. Visitor signals automatically become lead scores, routing rules, SDR tasks, and first-touch attribution, with no Zapier glue. It's bundled into every Relay plan, not a US$395 per month line item.</div>
+    </details>
+    <details class="faq">
+      <summary>Can the Implementation Agent really replace a partner?</summary>
+      <div class="a">For SMB migrations (under 25 users), yes, in 72 hours, flat US$2,500. For mid-market (under 250 users), yes, in about two weeks, flat US$9,500, with a human-in-the-loop review flow. Complex regulated migrations still benefit from a named implementation lead, which is included in the Enterprise plan.</div>
+    </details>
+    <details class="faq">
+      <summary>What about data sovereignty and privacy?</summary>
+      <div class="a">Multi-region data residency (US, EU, AU), SOC 2 Type II at GA, DPA on request, and a zero-retention inference mode. Every agent action is logged with full provenance and can be reverted. Sources only identifies business IPs by default; personal-device identification is opt-in with a clear banner.</div>
+    </details>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="wrap" id="waitlist">
+  <div class="cta-block">
+    <div class="eyebrow" style="justify-content:center;display:inline-flex">Private beta</div>
+    <h2>Join the first 500 teams on Relay.</h2>
+    <p>We're onboarding design partners through Q2 2026 with a free HubSpot migration. Leave your email and we'll be in touch within 24 hours.</p>
+    <form onsubmit="event.preventDefault(); this.querySelector('button').innerText='You\u2019re on the list →';">
+      <input type="email" placeholder="you@company.com" required />
+      <button class="btn btn-primary btn-lg" type="submit">Request access</button>
+    </form>
+    <div class="note">No credit card · 12-month contract optional · migration is free on annual</div>
+  </div>
+</section>
+
+<footer class="foot wrap">
+  <div class="cols">
+    <div>
+      <div class="logo" style="margin-bottom:14px">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E5BFF"/><stop offset="1" stop-color="#4B7AFF"/></linearGradient></defs>
+          <rect x="4" y="4" width="32" height="32" rx="9" fill="none" stroke="url(#lg2)" stroke-width="2"/>
+          <path d="M12 24 L18 16 L24 24 L30 16" stroke="url(#lg2)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        Relay
+      </div>
+      <p style="color:var(--muted);font-size:13px;margin:0;max-width:28ch">The agentic CRM for B2B revenue teams. Sydney · San Francisco.</p>
+    </div>
+    <div><h5>Outcomes</h5><a href="#traffic">More traffic</a><a href="#leads">More leads</a><a href="#revenue">More revenue</a><a href="#retention">More retention</a></div>
+    <div><h5>Product</h5><a href="#agents">Agent fleet</a><a href="#forecasting">Forecasting</a><a href="#documents">Contracts</a><a href="#sources">Sources script</a><a href="#pricing">Pricing</a></div>
+    <div><h5>Company</h5><a href="#">About</a><a href="#">Careers</a><a href="#">Contact</a><a href="#">Press kit</a></div>
+  </div>
+  <div class="row">
+    <div>© 2026 Relay. All rights reserved.</div>
+    <div style="display:flex;gap:20px"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Status</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tabs = document.querySelectorAll('#mockTabs span');
+  var views = document.querySelectorAll('.mock-main.view');
+  var nav = document.getElementById('mockNav');
+
+  function showView(name){
+    tabs.forEach(function(t){ t.classList.toggle('active', t.dataset.tab === name); });
+    views.forEach(function(v){ v.style.display = (v.dataset.view === name) ? '' : 'none'; });
+    if(nav){
+      nav.querySelectorAll('.item').forEach(function(i){
+        i.classList.toggle('active', i.dataset.nav === name);
+      });
+    }
+  }
+  tabs.forEach(function(t){ t.addEventListener('click', function(){ showView(t.dataset.tab); }); });
+
+  if(nav){
+    var navMap = { pipeline:'pipeline', inbox:'inbox', campaigns:'campaigns', webinars:'campaigns', sources:'agents', sdr:'agents', call:'agents', forecast:'agents', documents:'agents', sequencer:'agents', service:'agents', reporting:'agents', campaign:'agents', webinar:'agents' };
+    nav.querySelectorAll('.item').forEach(function(i){
+      i.addEventListener('click', function(){
+        var view = navMap[i.dataset.nav];
+        if(view){ showView(view); }
+        nav.querySelectorAll('.item').forEach(function(x){ x.classList.remove('active'); });
+        i.classList.add('active');
+      });
+    });
+  }
+
+  var pipelineView = document.getElementById('viewPipeline');
+  if(pipelineView){
+    var chips = pipelineView.querySelectorAll('.chip-filter');
+    var rows = pipelineView.querySelectorAll('.mock-row:not(.header)');
+    chips.forEach(function(c){
+      c.addEventListener('click', function(){
+        chips.forEach(function(x){ x.classList.remove('active'); });
+        c.classList.add('active');
+        var stage = c.dataset.stage;
+        rows.forEach(function(r){
+          var match = (stage === 'all') || (r.dataset.stage === stage);
+          r.classList.toggle('hidden', !match);
+        });
+      });
+    });
+
+    var detail = document.getElementById('rowDetail');
+    rows.forEach(function(r){
+      r.addEventListener('click', function(){
+        rows.forEach(function(x){ x.classList.remove('selected'); });
+        r.classList.add('selected');
+        if(detail && r.dataset.detail){
+          detail.textContent = '› ' + r.dataset.detail;
+          detail.style.borderColor = 'rgba(30,91,255,.3)';
+          detail.style.background = 'rgba(30,91,255,.04)';
+          detail.style.color = 'var(--text)';
+        }
+      });
+    });
+  }
+
+  document.querySelectorAll('.mock-main.view').forEach(function(v){
+    if(v.id === 'viewPipeline') return;
+    var chips = v.querySelectorAll('.chip-filter');
+    chips.forEach(function(c){
+      c.addEventListener('click', function(){
+        chips.forEach(function(x){ x.classList.remove('active'); });
+        c.classList.add('active');
+      });
+    });
+  });
+
+  document.querySelectorAll('.vf-row').forEach(function(row){
+    row.addEventListener('click', function(){
+      var open = row.querySelector('.vf-expand');
+      if(open){ open.remove(); row.style.background=''; return; }
+      var meta = row.querySelector('.meta');
+      var ex = document.createElement('div');
+      ex.className = 'vf-expand';
+      ex.style.cssText = 'grid-column:1 / -1;margin-top:10px;padding:12px 14px;border-radius:10px;background:var(--ink-2);border:1px solid var(--line);font-size:12px;color:var(--sub);display:grid;gap:6px;font-family:\"JetBrains Mono\",monospace';
+      ex.innerHTML = '<div>→ matched to target account list (Tier 1 · AU mid-market)</div>'+
+                     '<div>→ last visit session: ' + (meta ? meta.textContent : '') + '</div>'+
+                     '<div>→ auto-routed to SDR Agent · sequence drafted · ready for review</div>';
+      row.appendChild(ex);
+      row.style.background = 'rgba(30,91,255,.04)';
+    });
+  });
+
+  // Products mega-menu
+  (function(){
+    var toggle = document.getElementById('productsToggle');
+    var mega = document.getElementById('productsMega');
+    if(!toggle || !mega) return;
+    var isOpen = false;
+    function setOpen(v){
+      isOpen = v;
+      toggle.classList.toggle('open', v);
+      mega.classList.toggle('open', v);
+      toggle.setAttribute('aria-expanded', v ? 'true' : 'false');
+    }
+    toggle.addEventListener('click', function(e){
+      e.stopPropagation();
+      setOpen(!isOpen);
+    });
+    document.addEventListener('click', function(e){
+      if(!isOpen) return;
+      if(mega.contains(e.target)) return;
+      setOpen(false);
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && isOpen) setOpen(false);
+    });
+    // Close on hub-item click so anchor jumps feel instant
+    Array.prototype.forEach.call(mega.querySelectorAll('.hub-item, .pill-links a'), function(el){
+      el.addEventListener('click', function(){ setTimeout(function(){ setOpen(false); }, 50); });
+    });
+  })();
+})();
+</script>
+
+</body>
+</html>
